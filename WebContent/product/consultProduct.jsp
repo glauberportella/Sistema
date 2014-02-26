@@ -71,7 +71,7 @@
 		 							Supplier supplier = (Supplier) listSupplier[i];
 		 							boolean bSelected = productFilter.getSupplier().getIdSupplier() == supplier.getIdSupplier(); 
 					%>
-							<option <%=bSelected ? "selected" : "" %> value="<%=supplier.getIdSupplier()%>"><%=supplier.getFantasyName()%></option>
+							<option <%=bSelected ? "selected" : "" %> value="<%	plier.getIdSupplier()%>"><%=supplier.getFantasyName()%></option>
 					<%
 		 						}
 							}

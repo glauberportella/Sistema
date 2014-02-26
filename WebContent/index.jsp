@@ -12,9 +12,8 @@
 	<div id="fixed">
 		<div class="content"><%@ include file="menu.jsp"%></div>
 	</div>
-	<div id="notification">Notificações blá bláblá blá lbá blá blá
-		blá bláblá blá lbá blá blá blá bláblá blá lbá blá blá blá bláblá blá
-		lbá blá blá blá bláblá blá lbá blá blá blá bláblá blá lbá blá blá</div>
+	<div id="notification">
+	<%@ include file="notifications.jsp"%></div>
 	<div align="justify" id="main">
 		<iframe frameborder="0" marginheight="0%" marginwidth="0%" id="main"
 			style="width: 100%; height: 100%;"> </iframe>
