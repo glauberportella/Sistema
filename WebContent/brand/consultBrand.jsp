@@ -5,9 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css"
-	href="./css/style-menu-usecase.css">
-<title>Consultar Marca</title>
+<link rel="stylesheet" 	href="./css/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript">
 	function find() {
 		document.getElementById("newAction").value = "find";
@@ -44,26 +42,44 @@
 %>
 </head>
 <body>
-	<div id="title">Consultar Marca</div>
-	<form name="frm" id="frm" method="post" action="./dispatcher">
-		<input type="hidden" name="newAction" id="newAction" /> <input
-			type="hidden" name="entityName" id="entityName" value="Brand" /> <input
-			type="hidden" name="id" id="id" />
-		<div class="label">Descrição:</div>
-		<input class="field" type="text" name="description" id="description"
-			maxlength="100"
-			value="<%=(brandFilter.getDescription() != null) ? brandFilter
-					.getDescription() : ""%>" />
-		<br />
-		<div id="menu" align="left">
-			<ul>
-				<li><a href="javascript:find();">Consultar</a></li>
-				<li><a href="javascript:goNew();">Cadastrar</a></li>
-				<li><a href="javascript:clean();">Limpar</a></li>
-			</ul>
-		</div>
-		<table id="table" cellspacing="0" cellpadding="0">
+<!-- TItle -->
+	<div class="page-header">
+  		<h1>Consultar Marca <!-- <small>Pesquise a marca pela descrição</small> --></h1>
+ 	</div>
+ 	
+ <form name="frm" id="frm" method="post" action="./dispatcher">
+		<input type="hidden" name="newAction" id="newAction" /> 
+		<input type="hidden" name="entityName" id="entityName" value="Brand" />
+		<input type="hidden" name="id" id="id" />	
+ 	
+ 	
+ 	
+ 	<div class="panel panel-default">
+  <div class="panel-heading">Marca</div>
+  <div class="panel-body">
+    
+<div class="row">
+  <div class="col-lg-6">
+<!--    <span class="label label-default">Marca</span> -->
+   <div class="input-group">
+   		<input type="text" class="form-control" placeholder="Pesquisar por marca ..." name="description" id="description"
+							value="<%=(brandFilter.getDescription() != null) ? brandFilter.getDescription() : ""%>"/>
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ><a href="javascript:find();">Consultar</a></button>
+		<button type="button" class="btn btn-default"><a href="javascript:goNew();">Cadastrar</a></button>
+		<button type="button" class="btn btn-default"><a href="javascript:clean();">Limpar</a></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+ 	<br/>
+ 	
+<!-- Table -->
+	
+<!-- <br/> porque dois br ? :( -->
+		<table class="table table-hover">
 			<tr>
+<!-- 			Usar isto para inadimplentes <td class="danger">...</td> -->
 				<th>Código</th>
 				<th style="width: 660px; text-align: left;">Descrição</th>
 				<th></th>
@@ -76,17 +92,23 @@
 			<tr>
 				<td><%=brandAux.getIdBrand()%></td>
 				<td><%=brandAux.getDescription()%></td>
-				<td style="text-align: center;"><a class="link"
-					href="javascript:detail(<%=brandAux.getIdBrand()%>);"><img
-						src="./img/edit.png"></a> &nbsp; <a class="link"
-					href="javascript:deleteList(<%=brandAux.getIdBrand()%>);"><img
-						src="./img/delete.png"></a></td>
+				<td style="text-align: center;">
+					<a href="javascript:detail(<%=brandAux.getIdBrand()%>);">
+						<span class="glyphicon glyphicon-pencil"></span>
+					</a> 
+						&nbsp; 
+					<a href="javascript:deleteList(<%=brandAux.getIdBrand()%>);">
+						<span class="glyphicon glyphicon-trash"></span>
+					</a>
+				</td>
 			</tr>
 			<%
 				}
 				}
 			%>
 		</table>
+		 </div>
+</div>
 	</form>
 </body>
 </html>

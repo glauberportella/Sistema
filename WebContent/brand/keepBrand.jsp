@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="./css/style-menu-usecase.css">
-<title>Cadastro de Marca</title>
+<link rel="stylesheet" 	href="./css/bootstrap/css/bootstrap.min.css">
 <script type="text/javascript">
 	function save() {
 		if ((document.getElementById("description").value != "")){
@@ -42,25 +41,40 @@
 %>
 </head>
 <body>
-	<div id="title">Cadastro de Marca</div>
+	<!-- TItle -->
+	<div class="page-header">
+  		<h1>Cadastro Marca</h1>
+ 	</div>
+ 	
 	<form name="frm" id="frm" method="post" action="./dispatcher">
 		<input type="hidden" name="newAction" id="newAction" />
 		<input type="hidden" name="entityName" id="entityName" value="Brand" /> 
 		<input type="hidden" name="id" id="id" />
-		<div class="label">Código:</div>
-		<input class="fieldDisabled" readonly type="text" name="idbrand" id="idbrand" value="<%=(brand.getIdBrand() == null) ? "" : brand.getIdBrand()%>" />
-		<br/>
-		<div class="label">Descrição:*</div>
-		<input class="field" type="text" name="description" id="description" maxlength="100" value="<%=(brand.getDescription() == null) ? "" : brand.getDescription()%>" />
 		
-		<div  id="menu" align="left" >
-			<ul>
-				<li ><a href="javascript:save();">Salvar</a></li>
-				<li><a href="javascript:clean();">Limpar</a></li>
-				<li><a href="javascript:remover();">Excluir</a></li>
-				<li><a href="javascript:goFind();">Voltar</a></li>
-			</ul>
-		</div>
+		
+<div class="panel panel-default">
+  <div class="panel-heading">Marca</div>
+  
+  <div class="panel-body">
+		<span class="label label-default">Código</span>
+			<div class="input-group">
+				<input class="form-control" id="disabledInput" type="text" placeholder="Código" disabled name="idbrand" id="idbrand" value="<%=(brand.getIdBrand() == null) ? "" : brand.getIdBrand()%>">
+			</div>
+		<br/>
+		<span class="label label-default">Descrição</span>
+			<div class="input-group">
+				<input class="form-control" id="disabledInput" type="text" placeholder="Descrição" name="idbrand" id="idbrand" value="<%=(brand.getDescription() == null) ? "" : brand.getDescription()%>" name="description" id="description" maxlength="100" value="<%=(brand.getDescription() == null) ? "" : brand.getDescription()%>">
+			</div>
+		<br/>
+	
+
+		<button type="button" class="btn btn-default" ><a href="javascript:save();">Salvar</a></button>
+		<button type="button" class="btn btn-default"><a href="javascript:clean();">Limpar</a></button>
+		<button type="button" class="btn btn-default"><a href="javascript:remover();">Excluir</a></button>
+		<button type="button" class="btn btn-default"><a href="javascript:goFind();">Voltar</a></button>
+		
+</div>
+</div>
 	</form>
 </body>
 </html>

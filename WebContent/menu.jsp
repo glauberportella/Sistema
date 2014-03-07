@@ -13,66 +13,26 @@
 
 <div id="cssmenu" >
 <ul>
-   <li class="has-sub"><a href="javascript:execute('Brand','goFind');"><span>Marca</span></a>
+   <li class="has-sub"><a href="javascript:execute('Brand','goFind');"><span>Atendimento</span></a>
    		<ul>
-    	   <li class="last"><a href="javascript:execute('Brand','goFind');"><span>Consulta</span></a></li>
-           <li class="last"><a href="javascript:execute('Brand','goNew');"><span>Cadastro</span></a></li>
+    	   <li class="has-sub"><a href="javascript:execute('Brand','goFind');"><span>Candidato</span></a>
+    	   		<ul>
+    	   			<li class="last"><a href="javascript:execute('Brand','goFind');"><span>Cadastrar</span></a></li>
+           			<li class="last"><a href="javascript:execute('Brand','goNew');"><span>Consultar</span></a></li>
+       			</ul>
+    	   </li>
+           <li class="has-sub"><a href="javascript:execute('Brand','goNew');"><span>Empresa</span></a>
+           		<ul>
+    	   			<li class="last"><a href="javascript:execute('Brand','goFind');"><span>Cadastrar</span></a></li>
+           			<li class="last"><a href="javascript:execute('Brand','goNew');"><span>Consultar</span></a></li>
+       			</ul>
+           </li>
        </ul>
    </li>
-   <li class="has-sub"><a href="javascript:execute('Model','goFind');"><span>Modelo</span></a>
+    <li class="has-sub"><a href="javascript:execute('Brand','goFind');"><span>Financeiro</span></a>
    		<ul>
-      	   <li class="last"><a href="javascript:execute('Model','goFind');"><span>Consulta</span></a></li>
-           <li class="last"><a href="javascript:execute('Model','goNew');"><span>Cadastro</span></a></li>
-       	</ul>
-   </li>
-   <li class="has-sub"><a href="javascript:execute('Vehicle','goFind');"><span>Veículo</span></a>
-   		<ul>
-       	   <li class="last"><a href="javascript:execute('Vehicle','goFind');"><span>Consulta</span></a></li>
-           <li class="last"><a href="javascript:execute('Vehicle','goNew');"><span>Cadastro</span></a></li>
-       </ul>
-   </li>
-   <li class="has-sub"><a href="javascript:execute('Product','goFind');"><span>Produto</span></a>
-   		<ul>
-       	   <li class="last"><a href="javascript:execute('Product','goFind');"><span>Consulta</span></a></li>
-           <li class="last"><a href="javascript:execute('Product','goNew');"><span>Cadastro</span></a></li>
-       </ul>
-   </li>
-   <li class="has-sub"><a href="javascript:execute('OS','goFind');"><span>Ordem de Serviço</span></a>
-	<ul>
-         <li class="has-sub"><a href="javascript:execute('OS','goFind');"><span>Ordem de Serviço</span></a>
-            <ul>
-               <li class="last"><a href="javascript:execute('OS','goFind');"><span>Consulta</span></a></li>
-               <li class="last"><a href="javascript:execute('OS','goNew');"><span>Cadastro</span></a></li>
-           	</ul>
-         </li>
-         <li class="has-sub"><a href="javascript:execute('SS','goFind');"><span>Solicitação de Serviço</span></a>
-            <ul>
-    	        <li class="last"><a href="javascript:execute('SS','goFind');"><span>Consulta</span></a></li>
-	           	<li class="last"><a href="javascript:execute('SS','goNew');"><span>Cadastro</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li class="has-sub"><a href="javascript:execute('Client','goFind');"><span>Cliente</span></a>
-      <ul>
-         <li class="has-sub"><a href="javascript:execute('Client','goFind');"><span>Cliente Pessoa Física</span></a>
-            <ul>
-               <li class="last"><a href="javascript:execute('Client','goFind');"><span>Consulta</span></a></li>
-               <li class="last"><a href="javascript:execute('Client','goNew');"><span>Cadastro</span></a></li>
-           	</ul>
-         </li>
-         <li class="has-sub"><a href="javascript:execute('JuridicClient','goFind');"><span>Cliente Pessoa Jurídica</span></a>
-            <ul>
-    	        <li class="last"><a href="javascript:execute('JuridicClient','goFind');"><span>Consulta</span></a></li>
-	           	<li class="last"><a href="javascript:execute('JuridicClient','goNew');"><span>Cadastro</span></a></li>
-            </ul>
-         </li>
-      </ul>
-   </li>
-   <li class="has-sub"><a href="javascript:execute('Supplier','goFind');"><span>Fornecedor</span></a>
-   		<ul>
-        	   <li class="last"><a href="javascript:execute('Supplier','goFind');"><span>Consulta</span></a></li>
-               <li class="last"><a href="javascript:execute('Supplier','goNew');"><span>Cadastro</span></a></li>
+    	   <li class="last"><a href="javascript:execute('Brand','goFind');"><span>Inserir lançamento</span></a></li>
+           <li class="last"><a href="javascript:execute('Brand','goNew');"><span>Consultar</span></a></li>
        </ul>
    </li>
 </ul>
